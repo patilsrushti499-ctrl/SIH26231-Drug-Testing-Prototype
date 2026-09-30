@@ -1,0 +1,12 @@
+{
+  "name": "Digital Companion for Field Drug Testing",
+  "short_name": "Fieldtest",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f6f4",
+  "theme_color": "#102421",
+  "description": "Capture presumptive field-test results and preserve a signed record.",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
