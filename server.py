@@ -23,7 +23,8 @@ from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 
 ROOT = Path(__file__).resolve().parent
-DATA = Path(os.environ.get("FIELDTEST_DATA_DIR", ROOT / "data")).expanduser().resolve()
+DEFAULT_DATA = Path("/tmp/fieldtest-data") if os.environ.get("VERCEL") else ROOT / "data"
+DATA = Path(os.environ.get("FIELDTEST_DATA_DIR", DEFAULT_DATA)).expanduser().resolve()
 IMAGES = DATA / "images"
 DB_PATH = DATA / "fieldtest.sqlite3"
 KEY_PATH = DATA / "signing-key.pem"
